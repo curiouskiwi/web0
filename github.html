@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CS50x</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    </head>
+    <body>
+      <div class="container">
+<h3 id="git-and-github"><code class="highlighter-rouge">git</code> and GitHub</h3>
+
+<p>If you don’t already have a GitHub account, head over to
+<a href="https://github.com/join">https://github.com/join</a> and create an account.
+You can use this account throughout the course to work on assignments.</p>
+
+<p>You’ll also need to make sure you have <code class="highlighter-rouge">git</code> installed on your computer.  Go to
+GitHub’s <a href="https://help.github.com/articles/set-up-git/">instructions</a> for
+setting up and configuring <code class="highlighter-rouge">git</code> on your machine, and follow the steps there to
+install <code class="highlighter-rouge">git</code> (if you didn’t already have it installed) and configure <code class="highlighter-rouge">git</code>
+with your GitHub username and email address.</p>
+
+<h3 id="getting-online">Getting Online</h3>
+
+<p>Okay, it’s time to push your <code class="highlighter-rouge">project0</code> folder to a repository of your own on GitHub! In your terminal window, navigate to your <code class="highlighter-rouge">project0</code> directory, and then run:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git init
+$ git add -A
+</code></pre></div></div>
+
+<p>to let <code class="highlighter-rouge">git</code> know that you want to include <em>all</em> changed files (<code class="highlighter-rouge">-A</code>) in your next commit to this repository. Now, run:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git commit -m "My first webpage"
+</code></pre></div></div>
+
+<p>to commit your changes to this repository. The string after <code class="highlighter-rouge">-m</code> is your <em>commit message</em>, a short written description of the changes you’ve made in this commit. Writing succinct, informative commit messages will help you refer back to old changes later!</p>
+
+<p>Now, let’s push our changes to the internet. Navigate to GitHub, logging into your account if necessary, and then at the top right next to your avatar there should be a dropdown menu with a <code class="highlighter-rouge">+</code> symbol. Click on that symbol and from the dropdown select <strong>New repository</strong>. On the page that appears, type in <code class="highlighter-rouge">project0</code> as your repository name, provide an optional description if you wish, select <strong>Public</strong> as your visibility option, and leave the <strong>Initialize this repository with a README</strong> checkbox unchecked; recall that we already have a file called <code class="highlighter-rouge">README.md</code> in our staging area! When all finished, click <strong>Create repository</strong>.</p>
+
+<p>Almost there! Now jump back your terminal, and run the following:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git remote add origin https://github.com/USERNAME/project0.git
+$ git push -u origin master
+</code></pre></div></div>
+
+<p>Only use the full <code class="highlighter-rouge">git push</code> command above the very first time you push to the remote repository, since it is a shorthand to set the upstream branch you want to push to (recall what this means from Lecture 1). Afterwards, when you update, you can use the more-familiar:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git push
+</code></pre></div></div>
+
+<p>You may be prompted to enter your GitHub username and password before doing so. (If you’ve used GitHub before and your profile is configured to use SSH keys, see <a href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/">here</a> for more information. But once finished, your commit should be pushed to GitHub. Substituting your own username for <code class="highlighter-rouge">USERNAME</code>, confirm as much by visiting <code class="highlighter-rouge">http://github.com/USERNAME/project0</code>.</p>
+
+<p>Now there’s just one more step within GitHub to enable your code deployed to GitHub Pages. Near the top of your repository page on GitHub you should find a link to Settings. Click it, and then scroll down to the <strong>GitHub Pages</strong> section. Under <strong>Source</strong> in that section, select <strong>master branch</strong> from the dropdown menu, then click <strong>Save</strong>. Now open a new browser tab and visit <code class="highlighter-rouge">http://USERNAME.github.io/project0</code>. You should see a webpage that just says “Hello, world!” with a title of “My Webpage.” Your webpage is now deployed to the internet… congratulations!</p>
